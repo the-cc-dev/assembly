@@ -23,7 +23,7 @@ class Home extends React.Component {
         <p className='txt-l mt18'>
           Assembly is an open source CSS framework that makes the hard parts of designing for the web easy.
         </p>
-        <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb48 txt-l txt-bold'>
+        <h2 className='border-b border--2 border--gray-faint pb6 mt96 mb48 txt-l txt-bold'>
           Getting started
         </h2>
         <p>
@@ -61,7 +61,7 @@ class Home extends React.Component {
           Unsure what else you need in the <code className='txt-code'>&lt;head&gt;</code>? Check out <a className='link' href='https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML'>MDN's detailed guide</a>.
         </p>
 
-        <h2 className='border-b border--2 border--gray-faint pb6 mt72 txt-l txt-bold'>
+        <h2 className='border-b border--2 border--gray-faint pb6 mt96 txt-l txt-bold'>
           Philosophy
         </h2>
         <div className='grid grid--gut24 grid--gut48-ml'>
@@ -90,7 +90,7 @@ class Home extends React.Component {
             </p>
           </div>
         </div>
-        <h2 className='border-b border--2 border--gray-faint pb6 mt72 txt-l txt-bold'>
+        <h2 className='border-b border--2 border--gray-faint pb6 mt96 txt-l txt-bold'>
           Overview
         </h2>
 

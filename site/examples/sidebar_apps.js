@@ -36,7 +36,7 @@ class ExampleSidebarApps extends React.Component {
   render() {
     return (
       <div>
-        <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l txt-bold'>
+        <h2 className='border-b border--2 border--gray-faint pb6 mt96 mb24 txt-l txt-bold'>
           Full height sidebar
         </h2>
         <HtmlExample code={basicSidebar} />

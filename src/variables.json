@@ -1,4 +1,5 @@
 {
+
   "gray-dark": "#2d2d2d",
   "gray": "#666",
   "gray-light": "#ccc",
@@ -60,16 +61,16 @@
   "white": "#fff",
   "transparent": "transparent",
 
-  "neutral10": "rgba(127, 127, 127, 0.1)",
-  "neutral25": "rgba(127, 127, 127, 0.25)",
-  "neutral45": "rgba(127, 127, 127, 0.45)",
+  "disabled-interactive-faint": "rgba(127, 127, 127, 0.1)",
+  "disabled-interactive-light": "rgba(127, 127, 127, 0.25)",
+  "disabled-interactive": "rgba(127, 127, 127, 0.45)",
 
   "text-color": "rgba(0, 0, 0, 0.75)",
 
-  "default-primary-interactive-color": "#448ee4",
-  "default-primary-interactive-color-dark": "#346db0",
+  "primary-interactive-color": "#448ee4",
+  "primary-interactive-color-active": "#346db0",
 
-  "default-secondary-interactive-color": "#999",
+  "border-interactive-color": "#999",
 
   "border-radius": "4px",
   "border-radius-bold": "8px",

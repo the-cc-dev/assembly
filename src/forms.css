@@ -40,12 +40,12 @@
 
 .input:focus,
 .textarea:focus {
-  border-color: var(--default-primary-interactive-color);
+  border-color: var(--primary-interactive-color);
 }
 
 .input::placeholder,
 .textarea::placeholder {
-  color: var(--neutral45);
+  color: var(--disabled-interactive);
 }
 
 /* Without this, IE always has a scrollbar */
@@ -134,8 +134,8 @@
 .textarea:disabled {
   pointer-events: none;
   color: var(--darken50) !important;
-  background-color: var(--neutral10) !important;
-  border-color: var(--neutral25) !important;
+  background-color: var(--disabled-interactive-faint) !important;
+  border-color: var(--disabled-interactive-light) !important;
 }
 
 /* Using the attribute selector instead of the pseudo-class `:read-only`
@@ -150,7 +150,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  */
 .input[readonly],
 .textarea[readonly] {
-  background-color: var(--neutral10) !important;
+  background-color: var(--disabled-interactive-faint) !important;
 }
 
 /**
@@ -204,7 +204,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   transition: color var(--transition),
     background-color var(--transition);
   border-radius: var(--border-radius);
-  background-color: var(--default-primary-interactive-color); /* match btn default state */
+  background-color: var(--primary-interactive-color); /* match btn default state */
 }
 
 .select-arrow {
@@ -225,7 +225,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 
 /* default hover state */
 .select:hover {
-  background-color: var(--default-primary-interactive-color-dark);
+  background-color: var(--primary-interactive-color-active);
 }
 
 /* Some browsers color the option text and background, so reset that */
@@ -330,7 +330,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 .select:disabled {
   pointer-events: none;
   color: var(--darken25) !important;
-  background-color: var(--neutral25) !important;
+  background-color: var(--disabled-interactive-light) !important;
   border-color: transparent !important;
 }
 
@@ -382,7 +382,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   padding: 0;
   border: 0;
   border-radius: 2px;
-  background: var(--default-secondary-interactive-color);
+  background: var(--border-interactive-color);
   vertical-align: middle;
   cursor: pointer;
   box-shadow: none;
@@ -394,7 +394,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   padding: 0;
   border: 0;
   border-radius: 2px;
-  background: var(--default-secondary-interactive-color);
+  background: var(--border-interactive-color);
   vertical-align: middle;
   cursor: pointer;
   box-shadow: none;
@@ -411,14 +411,14 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 }
 
 .range > input::-ms-fill-lower {
-  background: var(--default-secondary-interactive-color);
+  background: var(--border-interactive-color);
   border: 0;
   box-shadow: none;
   border-radius: 2px;
 }
 
 .range > input::-ms-fill-upper {
-  background: var(--default-secondary-interactive-color);
+  background: var(--border-interactive-color);
   border: 0;
   box-shadow: none;
   border-radius: 2px;
@@ -441,7 +441,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   margin-top: -8px;
   border-radius: 50%;
   background: var(--white);
-  border: 2px solid var(--default-secondary-interactive-color);
+  border: 2px solid var(--border-interactive-color);
   cursor: pointer;
 }
 
@@ -452,7 +452,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   height: 20px;
   border-radius: 50%;
   background: var(--white);
-  border: 2px solid var(--default-secondary-interactive-color);
+  border: 2px solid var(--border-interactive-color);
   cursor: pointer;
 }
 
@@ -464,7 +464,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   margin-top: 0; /* Fixes Edge's vertical alignment */
   border-radius: 50%;
   background: var(--white);
-  border: 2px solid var(--default-secondary-interactive-color);
+  border: 2px solid var(--border-interactive-color);
   cursor: pointer;
 }
 
@@ -521,14 +521,14 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  *   <input disabled type='range' />
  * </div>
  */
-.range > input:disabled::-webkit-slider-runnable-track { background: var(--neutral45); }
-.range > input:disabled::-moz-range-track { background: var(--neutral45); }
-.range > input:disabled::-ms-fill-upper { background: var(--neutral45); }
-.range > input:disabled::-ms-fill-lower { background: var(--neutral45); }
+.range > input:disabled::-webkit-slider-runnable-track { background: var(--disabled-interactive); }
+.range > input:disabled::-moz-range-track { background: var(--disabled-interactive); }
+.range > input:disabled::-ms-fill-upper { background: var(--disabled-interactive); }
+.range > input:disabled::-ms-fill-lower { background: var(--disabled-interactive); }
 
-.range > input:disabled::-webkit-slider-thumb { border-color: var(--neutral45); background: var(--gray-faint); }
-.range > input:disabled::-ms-thumb { border-color: var(--neutral45); background: var(--gray-faint); }
-.range > input:disabled::-moz-range-thumb { border-color: var(--neutral45); background: var(--gray-faint); }
+.range > input:disabled::-webkit-slider-thumb { border-color: var(--disabled-interactive); background: var(--gray-faint); }
+.range > input:disabled::-ms-thumb { border-color: var(--disabled-interactive); background: var(--gray-faint); }
+.range > input:disabled::-moz-range-thumb { border-color: var(--disabled-interactive); background: var(--gray-faint); }
 
 /* shared form styles */
 .checkbox-container,
@@ -605,12 +605,12 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  */
 .checkbox {
   background-color: #fff;
-  color: var(--default-secondary-interactive-color);
+  color: var(--border-interactive-color);
   border-color: currentColor;
 }
 
 .checkbox-container:hover > .checkbox {
-  color: var(--default-primary-interactive-color);
+  color: var(--primary-interactive-color);
 }
 
 /* Ensure checkboxes inside buttons look nice */
@@ -659,12 +659,12 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  */
 .radio {
   border-radius: 50%;
-  color: var(--default-secondary-interactive-color);
+  color: var(--border-interactive-color);
   border-color: currentColor;
 }
 
 .radio-container:hover > .radio {
-  color: var(--default-primary-interactive-color);
+  color: var(--primary-interactive-color);
 }
 
 .radio::before {
@@ -718,7 +718,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   border-width: 2px;
   border-style: solid;
   border-color: currentColor;
-  color: var(--default-secondary-interactive-color);
+  color: var(--border-interactive-color);
   transition: color var(--transition),
     background-color var(--transition),
     border-color var(--transition);
@@ -792,7 +792,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 .toggle {
   flex-shrink: 0;
   cursor: pointer;
-  color: var(--default-secondary-interactive-color);
+  color: var(--border-interactive-color);
   font-weight: bold;
   padding: 0 12px;
   border-radius: 13px;
@@ -867,7 +867,7 @@ input:disabled + .radio,
 input:disabled + .switch {
   pointer-events: none;
   color: var(--darken25) !important;
-  background-color: var(--neutral25) !important;
+  background-color: var(--disabled-interactive-light) !important;
   border-color: transparent !important;
 }
 
@@ -885,12 +885,12 @@ input:checked + .radio::before {
 
 input:checked + .checkbox,
 input:checked + .radio {
-  color: var(--default-primary-interactive-color);
+  color: var(--primary-interactive-color);
 }
 
 /* state management for switches */
 .switch:hover {
-  color: var(--default-primary-interactive-color);
+  color: var(--primary-interactive-color);
 }
 
 input:checked + .switch::after {
@@ -900,17 +900,17 @@ input:checked + .switch::after {
 
 input:checked + .switch {
   border-color: transparent;
-  background-color: var(--default-primary-interactive-color);
+  background-color: var(--primary-interactive-color);
 }
 
 /* state management for toggles */
 .toggle:hover {
-  color: var(--default-primary-interactive-color);
-  border-color: var(--default-primary-interactive-color);
+  color: var(--primary-interactive-color);
+  border-color: var(--primary-interactive-color);
 }
 
 input:checked + .toggle {
-  background: var(--default-primary-interactive-color);
+  background: var(--primary-interactive-color);
   color: var(--white);
 }
 
@@ -937,6 +937,6 @@ input:disabled + .toggle {
 }
 
 input:checked:disabled + .toggle {
-  background-color: var(--neutral25) !important;
+  background-color: var(--disabled-interactive-light) !important;
   color: var(--darken25) !important;
 }

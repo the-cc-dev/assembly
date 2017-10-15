@@ -12,53 +12,31 @@ const fontSizes = [
   'txt-xs'
 ];
 
-const iconSizes = ['icon', 'icon icon--s', 'icon icon--l'];
-
-const wrapperClass = 'icon-inliner';
+const iconClasses = 'icon align-middle inline-block mr3';
 
 const getIconEl = icon => {
   return (
     <div key={icon} className="relative mb24 pb12 border-b border--gray-faint">
       <div className="mb12">
         <button className="btn round-full">
-          <div className={wrapperClass}>
-            <svg className="icon">
-              <use xlinkHref={`#icon-${icon}`} />
-            </svg>
-          </div>
+          <svg className={iconClasses}>
+            <use xlinkHref={`#icon-${icon}`} />
+          </svg>
           Button label
         </button>
       </div>
 
-      {fontSizes.map(f =>
-        iconSizes.map(c =>
-          <div className={`mb12 ${f}`}>
-            <div
-              className={
-                f.includes('h')
-                  ? wrapperClass + ' icon-inliner--heading'
-                  : wrapperClass
-              }
-            >
-              <svg className={c}>
-                <use xlinkHref={`#icon-${icon}`} />
-              </svg>
-            </div>
-            <span>Curabitur blandit tempus porttitor.</span>
-            <div
-              className={
-                f.includes('h')
-                  ? wrapperClass + ' icon-inliner--heading'
-                  : wrapperClass
-              }
-            >
-              <svg className={c}>
-                <use xlinkHref={`#icon-${icon}`} />
-              </svg>
-            </div>
-          </div>
-        )
-      )}
+      {fontSizes.map(f => (
+        <div key={f} className={`mb12 ${f}`}>
+          <svg className={iconClasses}>
+            <use xlinkHref={`#icon-${icon}`} />
+          </svg>
+          <span>Curabitur blandit tempus porttitor.</span>
+          <svg className={iconClasses}>
+            <use xlinkHref={`#icon-${icon}`} />
+          </svg>
+        </div>
+      ))}
     </div>
   );
 };

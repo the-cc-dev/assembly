@@ -12,14 +12,15 @@ const fontSizes = [
   'txt-xs'
 ];
 
-const iconClasses = 'icon align-middle inline-block mr3';
+const iconClassTxt = 'icon mr3 icon--in-txt';
+const iconClassH = 'icon mr3 icon--in-h';
 
 const getIconEl = icon => {
   return (
     <div key={icon} className="relative mb24 pb12 border-b border--gray-faint">
       <div className="mb12">
         <button className="btn round-full">
-          <svg className={iconClasses}>
+          <svg className={iconClassTxt}>
             <use xlinkHref={`#icon-${icon}`} />
           </svg>
           Button label
@@ -27,12 +28,12 @@ const getIconEl = icon => {
       </div>
 
       {fontSizes.map(f => (
-        <div key={f} className={`mb12 ${f}`}>
-          <svg className={iconClasses}>
+        <div className={`mb12 ${f}`}>
+          <svg className={f.includes('h') ? iconClassH : iconClassTxt}>
             <use xlinkHref={`#icon-${icon}`} />
           </svg>
           <span>Curabitur blandit tempus porttitor.</span>
-          <svg className={iconClasses}>
+          <svg className={f.includes('h') ? iconClassH : iconClassTxt}>
             <use xlinkHref={`#icon-${icon}`} />
           </svg>
         </div>
